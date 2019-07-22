@@ -12,4 +12,4 @@ const PrescriptionsSchema = new Schema({
     }
 });
 
-module.exports = Prescriptions = mongoose.model('prescription', PrescriptionsSchema);
+module.exports = Prescriptions = mongoose.model('prescriptions', PrescriptionsSchema);
