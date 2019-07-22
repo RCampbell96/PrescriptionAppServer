@@ -18,9 +18,9 @@ mongoose
     .catch(err => console.log(err));
 
 //Use Routes
-app.use('/api/prescription', Prescriptions)
-app.get('/', (req,res)=>{
-    res.send('Hello')
-})
+app.use('https://stark-lake-98779.herokuapp.com/api/prescription', Prescriptions)
+// app.get('/', (req,res)=>{
+//     res.send('Hello')
+// })
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
