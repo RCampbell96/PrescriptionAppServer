@@ -21,7 +21,9 @@ router.post('/', (req,res) => {
     const newPrescriptions = new Prescriptions({
         Prescription: req.body.Prescription,
     })
-    newPrescriptions.save().then(prescription => res.json(prescription));
+    newPrescriptions
+        .save()
+        .then(prescription => res.json(prescription));
 });
 
 //@route DELETE api/prescription/:id

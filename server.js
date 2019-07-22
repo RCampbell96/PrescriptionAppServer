@@ -18,7 +18,7 @@ mongoose
     .catch(err => console.log(err));
 
 //Use Routes
-app.use('https://stark-lake-98779.herokuapp.com/api/prescription', Prescriptions)
+app.use('/api/prescription', Prescriptions)
 // app.get('/', (req,res)=>{
 //     res.send('Hello')
 // })
