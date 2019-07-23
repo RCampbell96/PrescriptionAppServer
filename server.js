@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Prescriptions = require('./routes/api/prescription')
 const app = express();
+require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
 
@@ -9,16 +10,12 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 //DB config
-const db = require('./keys').mongoURI
+const db = process.env.mongoURI
+console.log(db)
 
 //Connect to MongoDB
 console.log(typeof process.env.mongoURI);
-if (process.env.mongoURI) {
-    mongoose
-    .connect(process.env.mongoURI, { useNewUrlParser: true })
-    .then(() => console.log('MongoDB Connected...'))
-    .catch(err => console.log(err));
-} else {
+
     mongoose.connect(db, { useNewUrlParser: true }, function (err) {
         if (err) {
             console.log(err);
@@ -26,7 +23,6 @@ if (process.env.mongoURI) {
             console.log('mongoose connection is successful on: ' + db);
         }
     });
-}
 
 //Use Routes
 app.use('/api/prescription', Prescriptions);
