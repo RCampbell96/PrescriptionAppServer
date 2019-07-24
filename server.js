@@ -11,10 +11,10 @@ app.use(express.json());
 
 //DB config
 const db = process.env.mongoURI
-console.log(db)
+//console.log(db)
 
 //Connect to MongoDB
-console.log(typeof process.env.mongoURI);
+//console.log(typeof process.env.mongoURI);
 
     mongoose.connect(db, { useNewUrlParser: true }, function (err) {
         if (err) {
