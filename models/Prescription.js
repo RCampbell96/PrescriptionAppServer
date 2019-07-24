@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const PrescriptionsSchema = new Schema({
     Prescription:{
         type: String,
-        require: true
+        required: true
     },
     Date:{
         type: Date,

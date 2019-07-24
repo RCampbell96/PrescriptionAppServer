@@ -23,7 +23,8 @@ router.post('/', (req,res) => {
     })
     newPrescriptions
         .save()
-        .then(prescription => res.json(prescription));
+        .then(prescription => res.json(prescription))
+        .catch(err => console.log(err));
 });
 
 //@route DELETE api/prescription/:id
