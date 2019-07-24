@@ -19,5 +19,6 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
-  }
+  },
+  "proxy": "https://stark-lake-98779.herokuapp.com/"
 }
